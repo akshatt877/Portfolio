@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshat Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-squares" aria-hidden="true"></div>
+
+    <main class="launcher-wrap" id="launcherWrap">
+      <section class="launcher" aria-label="Portfolio launcher">
+        <header class="launcher-header">
+          <div class="launcher-tab">
+            <span class="tab-pill">LAUNCHER</span>
+            <span class="boot-text">// Boot sequence</span>
+          </div>
+          <div class="window-dots">
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-slate"></span>
+          </div>
+        </header>
+
+        <div class="launcher-body">
+          <p class="line lead">
+            <span class="caret">&gt;</span> Ready to Enter Portfolio
+          </p>
+          <p class="line sub">Choose how you want to launch</p>
+          <p class="line waiting">
+            <span class="caret">&gt;</span> Waiting user input_
+          </p>
+
+          <div class="progress-group">
+            <div class="progress-top">
+              <span>Installation Progress</span>
+              <span id="progressPercent">0%</span>
+            </div>
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Installation progress"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <span id="progressFill" class="progress-fill"></span>
+            </div>
+          </div>
+
+          <div class="status-row">
+            <span id="assetsStatus">Assets: 0%</span>
+            <span id="shadersStatus">Shaders: 0%</span>
+            <span id="networkStatus">Network: Connecting</span>
+          </div>
+
+          <div class="actions">
+            <button id="withMusicBtn" class="action-btn action-main" disabled>
+              Enter With Music
+            </button>
+            <button id="withoutMusicBtn" class="action-btn action-alt" disabled>
+              Enter Without Music
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main class="portfolio-page hidden" id="portfolioPage">
+      <header class="top-nav">
+        <div class="status-orb" aria-hidden="true"></div>
+        <nav class="menu-links" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#testimonials">Testimonials</a>
+        </nav>
+        <a
+          id="contactBtn"
+          class="contact-btn"
+          href="https://github.com/akshatt877"
+          target="_blank"
+          rel="noreferrer"
+          >Contact me</a
+        >
+      </header>
+
+      <section class="hero-layout" id="home">
+        <section class="hero-left">
+          <div class="profile-meta">
+            <span class="level-pill">LEVEL 1</span>
+            <span>PLAYER PROFILE</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span id="heroName" class="name-accent">Akshat</span>
+            <span class="dash">-</span><br />
+            <span class="dev-accent">Dev</span> &amp; Creator
+          </h1>
+
+          <p class="hero-copy" id="heroBio">
+            Building web experiences with game-like polish, clean interfaces,
+            and expressive interactions.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              id="viewProjectsBtn"
+              class="hero-btn hero-btn-main"
+              href="https://github.com/akshatt877?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              >View Projects -></a
+            >
+            <a
+              id="hireBtn"
+              class="hero-btn hero-btn-alt"
+              href="https://github.com/akshatt877"
+              target="_blank"
+              rel="noreferrer"
+              >Hire Me</a
+            >
+          </div>
+
+          <div class="skill-chips" id="skillChips"></div>
+
+          <div class="project-grid" id="projectGrid"></div>
+        </section>
+
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <span class="mouse-icon"></span>
+          <span>Scroll</span>
+        </div>
+
+        <aside class="hero-right">
+          <span class="rank-pill">RANK S</span>
+          <div class="avatar-frame">
+            <img id="avatarImg" src="" alt="GitHub profile avatar" />
+          </div>
+          <div class="stats-line">
+            <span id="hpStat">HP 100</span>
+            <span id="xpStat">XP 30%</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="about-section" id="about">
+        <header class="about-head">
+          <h2>ABOUT • PLAYER</h2>
+          <p>
+            🎮 Game-inspired developer • Motion-first design • Retro arcade
+            polish
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-left-stack">
+            <article class="panel mission-panel">
+              <h3>🎯 MISSION</h3>
+              <p id="missionText">
+                I craft polished web products with smooth interaction, fast
+                performance, and expressive UI details.
+              </p>
+              <div class="panel-actions">
+                <a
+                  id="aboutProjectsBtn"
+                  class="panel-btn panel-btn-main"
+                  href="https://github.com/akshatt877?tab=repositories"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  VIEW PROJECTS ->
+                </a>
+                <a
+                  id="aboutContactBtn"
+                  class="panel-btn panel-btn-alt"
+                  href="https://github.com/akshatt877"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  CONTACT ME
+                </a>
+              </div>
+            </article>
+
+            <article class="panel abilities-panel" id="skills">
+              <h3>🔧 CORE ABILITIES</h3>
+              <div class="ability-grid" id="abilityGrid"></div>
+            </article>
+
+            <article class="panel stats-panel">
+              <h3>🏆 PLAYER STATS</h3>
+              <div class="stats-cards" id="playerStatsCards"></div>
+            </article>
+          </div>
+
+          <aside class="about-right panel">
+            <div class="about-tags" id="aboutTags"></div>
+            <div class="about-visual">
+              <img id="aboutAvatar" src="" alt="About visual" />
+            </div>
+            <div class="availability-pill">● AVAILABLE FOR WORK</div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="skills-section" id="skills-loadout">
+        <header class="skills-head">
+          <h2>SKILLS • LOADOUT</h2>
+          <p>🕹️ Choose your class • Prove your mastery • Level up your game</p>
+        </header>
+
+        <div class="loadout-tabs" id="loadoutTabs"></div>
+
+        <div class="loadout-grid">
+          <article class="loadout-main panel">
+            <h3 id="loadoutTitle">🏗️ FOUNDATIONS</h3>
+            <p id="loadoutLevel" class="loadout-level">⭐ Level 1 / 4</p>
+
+            <div class="loadout-divider"></div>
+
+            <p class="loadout-label">📦 EQUIPMENT</p>
+            <div class="equipment-chips" id="equipmentChips"></div>
+
+            <p class="loadout-label">🏅 ACHIEVEMENTS UNLOCKED</p>
+            <div class="achievement-list" id="achievementList"></div>
+          </article>
+
+          <aside class="loadout-side" id="loadoutSide"></aside>
+        </div>
+      </section>
+
+      <section class="projects-showcase-section" id="projects">
+        <header class="section-head-dark">
+          <h2>PROJECTS</h2>
+          <p>Showcasing live work from GitHub with a retro game window</p>
+        </header>
+
+        <article class="retro-window">
+          <header class="retro-window-head">
+            <div class="retro-dots" aria-hidden="true">
+              <span class="retro-dot red"></span>
+              <span class="retro-dot yellow"></span>
+              <span class="retro-dot green"></span>
+            </div>
+            <p>RETRO PROJECT WINDOW</p>
+            <span>Arrow keys + click dots</span>
+          </header>
+
+          <div class="retro-window-body">
+            <button
+              id="projectPrevBtn"
+              class="retro-nav-btn"
+              type="button"
+              aria-label="Previous project"
+            >
+              ◀
+            </button>
+
+            <div class="project-showcase-grid">
+              <div class="project-preview-frame">
+                <img id="projectPreviewImg" src="" alt="Project preview" />
+              </div>
+
+              <div class="project-showcase-content">
+                <h3 id="projectShowcaseTitle">PROJECT ONE</h3>
+                <p id="projectShowcaseSummary"></p>
+
+                <div id="projectShowcaseMeta" class="showcase-meta"></div>
+                <ul id="projectShowcasePoints" class="showcase-points"></ul>
+
+                <a
+                  id="projectShowcaseLink"
+                  class="showcase-link-btn"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  VIEW PROJECT ↗
+                </a>
+              </div>
+            </div>
+
+            <button
+              id="projectNextBtn"
+              class="retro-nav-btn"
+              type="button"
+              aria-label="Next project"
+            >
+              ▶
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="experience-section" id="experience">
+        <header class="section-head-dark">
+          <h2>EXPERIENCE</h2>
+          <p>Analog switchboard • CRT boot dossier</p>
+        </header>
+
+        <div class="experience-grid">
+          <article class="switchboard-panel">
+            <header class="switchboard-head">
+              <span>SWITCHBOARD</span>
+              <span>Flip + toggle to route signal</span>
+            </header>
+            <div id="switchboardList" class="switchboard-list"></div>
+            <footer class="switchboard-foot">
+              Arrow keys navigate • Toggles select • Enter to skip boot
+            </footer>
+          </article>
+
+          <article class="crt-monitor">
+            <header class="crt-head">
+              <div class="retro-dots" aria-hidden="true">
+                <span class="retro-dot red"></span>
+                <span class="retro-dot yellow"></span>
+                <span class="retro-dot green"></span>
+              </div>
+              <p>CRT MONITOR</p>
+              <span>Boot sequence on toggle</span>
+            </header>
+
+            <div class="crt-body">
+              <aside class="exp-role-card">
+                <h4 id="experienceRole">SENIOR FRONTEND ENGINEER</h4>
+                <p id="experienceCompany">NEOARCADE LABS</p>
+                <span id="experiencePeriod">2023 - Present • Remote</span>
+              </aside>
+
+              <section class="exp-main-content">
+                <h3 id="experienceTitle">NEOARCADE LABS</h3>
+                <p id="experienceSummary"></p>
+                <div id="experienceTags" class="showcase-meta"></div>
+                <ul id="experiencePoints" class="showcase-points"></ul>
+              </section>
+            </div>
+
+            <footer class="crt-foot">
+              <span>Toggles route signal • Enter to skip boot</span>
+              <div class="exp-nav-actions">
+                <button id="experiencePrevBtn" type="button">◀ PREV</button>
+                <button id="experienceNextBtn" type="button">NEXT ▶</button>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials-section" id="testimonials">
+        <header class="section-head-dark">
+          <h2>ARCADE REVIEWS</h2>
+          <p>Insert coin to continue</p>
+        </header>
+
+        <article class="arcade-cabinet">
+          <div class="cabinet-credits" id="reviewCredits">
+            CREDITS: 🪙 🪙 🪙
+          </div>
+
+          <div class="cabinet-screen">
+            <div class="screen-topline">
+              <span>STAGE 1-3</span>
+              <span>▶ PLAYING</span>
+              <span id="reviewScore">SCORE: 5000</span>
+            </div>
+
+            <div class="review-avatar">🧑‍💼</div>
+
+            <blockquote id="reviewQuote"></blockquote>
+
+            <div id="reviewStars" class="review-stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+
+            <div class="review-author-card">
+              <h4 id="reviewAuthor">GITHUB INSIGHTS</h4>
+              <p id="reviewAuthorRole">Repo analytics stream</p>
+            </div>
+          </div>
+
+          <footer class="cabinet-controls">
+            <button id="reviewPrevBtn" type="button">◀</button>
+            <button id="reviewNextBtn" type="button">▶</button>
+          </footer>
+        </article>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-topline"></div>
+        <header class="contact-head-row">
+          <div class="contact-label-wrap">
+            <span class="contact-label">CONTACT</span>
+            <span>// Insert Coin</span>
+          </div>
+          <div class="contact-status">Status ● ● ●</div>
+        </header>
+
+        <div class="contact-grid">
+          <form
+            id="contactForm"
+            class="contact-form-panel"
+            action="#"
+            method="post"
+          >
+            <label for="contactName">YOUR NAME</label>
+            <input id="contactName" name="name" type="text" required />
+
+            <label for="contactEmail">EMAIL</label>
+            <input id="contactEmail" name="email" type="email" required />
+
+            <label for="contactMessage">MESSAGE</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="8"
+              required
+            ></textarea>
+
+            <footer class="contact-form-foot">
+              <div class="contact-buttons-left">
+                <button class="contact-btn-send" type="submit">SEND</button>
+                <button class="contact-btn-reset" type="reset">RESET</button>
+              </div>
+              <div class="contact-buttons-right">
+                <a id="contactEmailLink" href="#">Email</a>
+                <a
+                  id="contactGithubLink"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </footer>
+          </form>
+
+          <aside class="contact-side-stack">
+            <article class="contact-card profile-mini-card">
+              <div class="mini-card-head">
+                <img id="miniAvatar" src="" alt="Profile avatar" />
+                <div>
+                  <h3 id="miniName">Akshat</h3>
+                  <p id="miniRole">Frontend • Creator</p>
+                </div>
+              </div>
+              <p id="miniBio"></p>
+              <div class="mini-card-actions">
+                <button id="pricingBtn" type="button">Pricing</button>
+                <button id="availabilityBtn" type="button">Availability</button>
+              </div>
+            </article>
+
+            <article class="contact-card connect-card">
+              <header>
+                <span>CONNECT</span>
+                <div class="window-dots">
+                  <span class="dot dot-orange"></span>
+                  <span class="dot dot-slate"></span>
+                </div>
+              </header>
+              <div class="connect-bars">
+                <div class="connect-track">
+                  <span id="connectBarOne"></span>
+                </div>
+                <div class="connect-track">
+                  <span id="connectBarTwo"></span>
+                </div>
+              </div>
+            </article>
+
+            <div class="contact-mini-stats">
+              <span id="contactHp">HP 100</span>
+              <span id="contactXp">XP 39%</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="final-cta-section">
+        <header class="final-cta-meta">
+          <span>● Online</span>
+          <span id="localTimeText">Local time: --:--:--</span>
+        </header>
+
+        <h2>LET'S BUILD<br />SOMETHING<br />EPIC</h2>
+
+        <a id="finalCtaMail" class="final-mail-btn" href="#"
+          >contact@akshatt.dev</a
+        >
+
+        <footer class="final-foot-row">
+          <small id="copyrightText">© 2026 All rights reserved.</small>
+          <button id="backToTopBtn" type="button">BACK TO TOP ↑</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
